@@ -1,0 +1,151 @@
+:root {
+    --primary-color: #0070d2; /* Salesforce Blue */
+    --text-color: #2b2b2b;
+    --bg-light: #f4f7f9;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin: 0;
+    background-color: var(--bg-light);
+}
+
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+header {
+    background: var(--white);
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li { margin-left: 20px; }
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+#hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #001e3e 0%, #0070d2 100%);
+    color: var(--white);
+}
+
+.hero-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Separa los elementos a los extremos */
+    gap: 50px;
+    padding: 0 40px;
+}
+
+.hero-text {
+    flex: 1.2; /* El texto ocupa un poco más de espacio que la imagen */
+    text-align: left;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: -1px;
+}
+
+.hero-text .subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+}
+
+/* Estilo Profesional para la Imagen */
+.hero-image {
+    flex: 0.8;
+    display: flex;
+    justify-content: flex-end; /* Alinea la foto a la derecha del contenedor */
+}
+
+.profile-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 24px; /* Bordes redondeados modernos, no círculo total */
+    object-fit: cover;
+    box-shadow: 20px 20px 60px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: translateY(-10px); /* Micro-interacción de UX */
+}
+
+
+.badge {
+    background: rgba(255,255,255,0.2);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin: 5px;
+    display: inline-block;
+}
+
+.job {
+    background: var(--white);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--primary-color);
+    border-radius: 4px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #2b2b2b;
+    color: white;
+}
+
+/* Responsive: En móviles el texto sigue arriba y la foto abajo */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column-reverse; /* La foto baja para priorizar el texto en móvil */
+        text-align: center;
+        padding: 40px 20px;
+    }
+    
+    .hero-image {
+        justify-content: center;
+    }
+
+    .profile-img {
+        width: 200px;
+        height: 200px;
+    }
+}
