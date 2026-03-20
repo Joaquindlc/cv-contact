@@ -1,12 +1,11 @@
-// Smooth Scroll para los enlaces de navegación
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+            behavior: 'smooth',
+            block: 'end',
+            inline: 'nearest'
         });
     });
 });
-
-
-console.log("¡Hola! Estás viendo el código de Joaquin de la Canal. Desarrollador técnico con foco en Salesforce.");

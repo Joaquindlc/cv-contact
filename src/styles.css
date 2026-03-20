@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #0070d2; /* Salesforce Blue */
+    --primary-color: #0070d2; 
     --text-color: #2b2b2b;
     --bg-light: #f4f7f9;
     --white: #ffffff;
@@ -59,13 +59,13 @@ nav a {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Separa los elementos a los extremos */
+    justify-content: space-between; 
     gap: 50px;
     padding: 0 40px;
 }
 
 .hero-text {
-    flex: 1.2; /* El texto ocupa un poco más de espacio que la imagen */
+    flex: 1.2; 
     text-align: left;
 }
 
@@ -81,24 +81,24 @@ nav a {
     margin-bottom: 1.5rem;
 }
 
-/* Estilo Profesional para la Imagen */
+
 .hero-image {
     flex: 0.8;
     display: flex;
-    justify-content: flex-end; /* Alinea la foto a la derecha del contenedor */
+    justify-content: flex-end; 
 }
 
 .profile-img {
     width: 300px;
     height: 300px;
-    border-radius: 24px; /* Bordes redondeados modernos, no círculo total */
+    border-radius: 24px;
     object-fit: cover;
     box-shadow: 20px 20px 60px rgba(0,0,0,0.3);
     transition: transform 0.3s ease;
 }
 
 .profile-img:hover {
-    transform: translateY(-10px); /* Micro-interacción de UX */
+    transform: translateY(-10px); 
 }
 
 
@@ -132,10 +132,9 @@ footer {
     color: white;
 }
 
-/* Responsive: En móviles el texto sigue arriba y la foto abajo */
 @media (max-width: 768px) {
     .hero-container {
-        flex-direction: column-reverse; /* La foto baja para priorizar el texto en móvil */
+        flex-direction: column-reverse; 
         text-align: center;
         padding: 40px 20px;
     }
